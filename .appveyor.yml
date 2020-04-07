@@ -48,6 +48,7 @@ install:
 #  lib-java/Makefile.in:212: recipe for target 'system-packages' failed
 #
 #  adding "|| :" to the end of these commands causes them to be silently ignored!
+- wget https://services.gradle.org/distributions/gradle-5.6.3-bin.zip
 - sudo sed -i '/https:\/\/packages.microsoft.com\/ubuntu\/.*\/mssql-server/d' /etc/apt/sources.list
 - sudo apt purge -qy --allow-change-held-packages mssql-server
 - sudo apt update -qq
