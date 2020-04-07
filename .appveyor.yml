@@ -53,7 +53,7 @@ install:
 #- sudo apt purge -qy --allow-change-held-packages mssql-server
 #- sudo apt update -qq
 #- sudo apt install -qy git make
-./gradlew clean install uploadArchives
+- ./gradlew clean install uploadArchives
 - make
 
 test_script:
