@@ -36,10 +36,11 @@ on_finish:
 
 init:
 - pwsh --version
-- /opt/appveyor/build-agent/pty 80 24 /usr/bin/pwsh -command "bash --version"
-- ps: bash --version
+#- /opt/appveyor/build-agent/pty 80 24 /usr/bin/pwsh -command "bash --version"
 
 install:
+- ps: Write-Host "Hello!"
+- ps: bash --version
 # workaround for:
 # Some packages could not be installed. This may mean that you have
 # requested an impossible situation or if you are using the unstable
