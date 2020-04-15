@@ -35,8 +35,8 @@ on_finish:
   - sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
 
 init:
-- appveyor version
 - pwsh --version
+- ps: appveyor version
 
 install:
 # workaround for:
