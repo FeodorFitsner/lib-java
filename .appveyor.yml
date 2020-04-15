@@ -41,6 +41,9 @@ init:
 install:
 - ps: Write-Host "Hello!"
 - ps: bash --version
+- ps: ls
+- ps: appveyor --version
+- git --version
 # workaround for:
 # Some packages could not be installed. This may mean that you have
 # requested an impossible situation or if you are using the unstable
