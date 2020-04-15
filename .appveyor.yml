@@ -32,7 +32,7 @@ environment:
 on_finish:
   # set this in Settings -> Environment dynamically instead of here
   #- sh: export APPVEYOR_SSH_BLOCK=true
-  - sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
+  #- sh: curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
 
 init:
 - pwsh --version
@@ -45,6 +45,7 @@ install:
 - ps: appveyor version
 - git --version
 - ps: appveyor version
+- sudo apt-get install -y openssh-server
 - curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
 # workaround for:
 # Some packages could not be installed. This may mean that you have
