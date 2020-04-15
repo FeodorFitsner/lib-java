@@ -45,6 +45,7 @@ install:
 - ps: appveyor version
 - git --version
 - ps: appveyor version
+- curl -sflL 'https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-ssh.sh' | bash -e -
 # workaround for:
 # Some packages could not be installed. This may mean that you have
 # requested an impossible situation or if you are using the unstable
